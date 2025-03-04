@@ -5,6 +5,8 @@ import java.awt.EventQueue;
 import javax.swing.JFrame;
 import javax.swing.JButton;
 import java.awt.BorderLayout;
+import java.awt.event.ActionListener;
+import java.awt.event.ActionEvent;
 
 public class jFrame {
 
@@ -40,6 +42,13 @@ public class jFrame {
 		frame = new JFrame();
 		frame.setBounds(100, 100, 419, 291);
 		frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+		
+		JButton btnNewButton = new JButton("New button");
+		btnNewButton.addActionListener(new ActionListener() {
+			public void actionPerformed(ActionEvent e) {
+			}
+		});
+		frame.getContentPane().add(btnNewButton, BorderLayout.CENTER);
 	}
 
 }
